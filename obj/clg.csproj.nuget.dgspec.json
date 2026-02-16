@@ -1,24 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\clg\\clg.csproj": {}
+    "C:\\dev\\DNG\\DNG.csproj": {}
   },
   "projects": {
-    "C:\\dev\\clg\\clg.csproj": {
+    "C:\\dev\\DNG\\DNG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\clg\\clg.csproj",
-        "projectName": "clg",
-        "projectPath": "C:\\dev\\clg\\clg.csproj",
+        "projectUniqueName": "C:\\dev\\DNG\\DNG.csproj",
+        "projectName": "DNG",
+        "projectPath": "C:\\dev\\DNG\\DNG.csproj",
         "packagesPath": "C:\\Users\\morne\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\clg\\obj\\",
+        "outputPath": "C:\\dev\\DNG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\morne\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
-        "originalTargetFrameworks": [
-          "net10.0"
-        ],
+        "originalTargetFrameworks": ["net10.0"],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -29,9 +27,7 @@
           }
         },
         "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
+          "warnAsError": ["NU1605"]
         },
         "restoreAuditProperties": {
           "enableAudit": "true",

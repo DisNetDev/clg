@@ -1,10 +1,11 @@
+using System;
 using System.Text.Json;
 using System.IO;
 using System.Linq;
 
 internal static class ConfigStore
 {
-    public const string ConfigFileName = "clg.json";
+    public const string ConfigFileName = "DNG-config.json";
 
     private static readonly JsonSerializerOptions ConfigJsonOptions = new()
     {
@@ -15,7 +16,18 @@ internal static class ConfigStore
 
     public static string EnsureConfigExists()
     {
-        var configPath = Path.Combine(Directory.GetCurrentDirectory(), ConfigFileName);
+        var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        var configDir = Path.Combine(appData, "DNG");
+        try
+        {
+            Directory.CreateDirectory(configDir);
+        }
+        catch
+        {
+            // ignore directory creation errors and fall back to current directory
+        }
+
+        var configPath = Path.Combine(configDir, ConfigFileName);
 
         if (File.Exists(configPath))
         {
@@ -40,7 +52,7 @@ internal static class ConfigStore
             }
         }
 
-        Save(configPath, new ClgConfig
+        Save(configPath, new DNGConfig
         {
             Games = new(),
             PathsToMonitor = new(),
@@ -50,31 +62,31 @@ internal static class ConfigStore
         return configPath;
     }
 
-    public static ClgConfig Load(string configPath)
+    public static DNGConfig Load(string configPath)
     {
         try
         {
             var json = File.ReadAllText(configPath);
-            var loaded = JsonSerializer.Deserialize<ClgConfig>(json, ConfigJsonOptions);
+            var loaded = JsonSerializer.Deserialize<DNGConfig>(json, ConfigJsonOptions);
             return Normalize(loaded);
         }
         catch
         {
-            return new ClgConfig { Games = new(), PathsToMonitor = new() };
+            return new DNGConfig { Games = new(), PathsToMonitor = new() };
         }
     }
 
-    private static ClgConfig Normalize(ClgConfig? config)
+    private static DNGConfig Normalize(DNGConfig? config)
     {
         if (config is null)
         {
-            return new ClgConfig { Games = new(), PathsToMonitor = new() };
+            return new DNGConfig { Games = new(), PathsToMonitor = new() };
         }
 
-        var games = config.Games ?? new List<ClgEntry>();
+        var games = config.Games ?? new List<DNGEntry>();
         var paths = config.PathsToMonitor ?? new List<string>();
 
-        var normalizedGames = new List<ClgEntry>(games.Count);
+        var normalizedGames = new List<DNGEntry>(games.Count);
         foreach (var entry in games)
         {
             if (entry is null)
@@ -82,7 +94,7 @@ internal static class ConfigStore
                 continue;
             }
 
-            normalizedGames.Add(new ClgEntry
+            normalizedGames.Add(new DNGEntry
             {
                 Name = entry.Name ?? string.Empty,
                 Path = entry.Path ?? string.Empty,
@@ -96,14 +108,14 @@ internal static class ConfigStore
             normalizedPaths.Add(path ?? string.Empty);
         }
 
-        return new ClgConfig
+        return new DNGConfig
         {
             Games = normalizedGames,
             PathsToMonitor = normalizedPaths,
         };
     }
 
-    public static void Save(string configPath, ClgConfig config)
+    public static void Save(string configPath, DNGConfig config)
     {
         var json = JsonSerializer.Serialize(config, ConfigJsonOptions);
 
@@ -169,7 +181,7 @@ internal static class ConfigStore
                         // store the discovered game's folder full path normalized to Windows style
                         var full = Path.GetFullPath(dir);
                         var windowsPath = full.Replace('/', '\\');
-                        config.Games.Add(new ClgEntry { Name = name, Path = windowsPath, ExecutablePath = string.Empty });
+                        config.Games.Add(new DNGEntry { Name = name, Path = windowsPath, ExecutablePath = string.Empty });
                         existingNames.Add(name);
                         added = true;
                     }
@@ -226,12 +238,12 @@ internal static class ConfigStore
         return true;
     }
 
-    private static bool TryReadConfigFromOldFormats(JsonElement root, out ClgConfig config)
+    private static bool TryReadConfigFromOldFormats(JsonElement root, out DNGConfig config)
     {
         // Old format #1: top-level array of entries
         if (root.ValueKind == JsonValueKind.Array)
         {
-            var entries = new List<ClgEntry>();
+            var entries = new List<DNGEntry>();
             foreach (var element in root.EnumerateArray())
             {
                 if (!TryReadSingleEntry(element, out var entry))
@@ -243,21 +255,21 @@ internal static class ConfigStore
                 entries.Add(entry);
             }
 
-            config = new ClgConfig { Games = entries, PathsToMonitor = new() };
+            config = new DNGConfig { Games = entries, PathsToMonitor = new() };
             return true;
         }
 
         // Old format #2: single entry object { Name, Path }
         if (TryReadSingleEntry(root, out var singleEntry))
         {
-            config = new ClgConfig { Games = new() { singleEntry }, PathsToMonitor = new() };
+            config = new DNGConfig { Games = new() { singleEntry }, PathsToMonitor = new() };
             return true;
         }
 
         // Partial/new-ish: object with one of the lists present
         if (root.ValueKind == JsonValueKind.Object)
         {
-            var games = new List<ClgEntry>();
+            var games = new List<DNGEntry>();
             var pathsToMonitor = new List<string>();
 
             if (root.TryGetProperty("games", out var gamesProp) && gamesProp.ValueKind == JsonValueKind.Array)
@@ -288,7 +300,7 @@ internal static class ConfigStore
 
             if (games.Count > 0 || pathsToMonitor.Count > 0)
             {
-                config = new ClgConfig { Games = games, PathsToMonitor = pathsToMonitor };
+                config = new DNGConfig { Games = games, PathsToMonitor = pathsToMonitor };
                 return true;
             }
         }
@@ -297,7 +309,7 @@ internal static class ConfigStore
         return false;
     }
 
-    private static bool TryReadSingleEntry(JsonElement element, out ClgEntry entry)
+    private static bool TryReadSingleEntry(JsonElement element, out DNGEntry entry)
     {
         entry = default!;
         if (element.ValueKind != JsonValueKind.Object)
@@ -318,7 +330,7 @@ internal static class ConfigStore
         string execPath = string.Empty;
         TryGetStringProperty(element, "executablePath", "ExecutablePath", out execPath);
 
-        entry = new ClgEntry { Name = name, Path = path, ExecutablePath = execPath };
+        entry = new DNGEntry { Name = name, Path = path, ExecutablePath = execPath };
         return true;
     }
 

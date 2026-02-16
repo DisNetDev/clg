@@ -7,14 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {},
     ".NETCoreApp,Version=v10.0/win-x64": {
-      "clg/1.0.0": {
+      "DNG/1.0.0": {
         "dependencies": {
           "Sharprompt": "3.0.1",
           "System.CommandLine": "2.0.3",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "10.0.3"
         },
         "runtime": {
-          "clg.dll": {}
+          "DNG.dll": {}
         }
       },
       "runtimepack.Microsoft.NETCore.App.Runtime.win-x64/10.0.3": {
@@ -824,7 +824,7 @@
     }
   },
   "libraries": {
-    "clg/1.0.0": {
+    "DNG/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -850,10 +850,6 @@
     }
   },
   "runtimes": {
-    "win-x64": [
-      "win",
-      "any",
-      "base"
-    ]
+    "win-x64": ["win", "any", "base"]
   }
 }

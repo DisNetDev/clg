@@ -1,2 +1,2 @@
-C:\dev\clg\bin\Release\net10.0\win-x64\publish\clg.pdb
-C:\dev\clg\bin\Release\net10.0\win-x64\publish\clg.exe
+C:\dev\DNG\bin\Release\net10.0\win-x64\publish\DNG.pdb
+C:\dev\DNG\bin\Release\net10.0\win-x64\publish\DNG.exe
