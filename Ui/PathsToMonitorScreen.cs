@@ -1,4 +1,7 @@
 using Sharprompt;
+using System.IO;
+using System;
+using System.Collections.Generic;
 
 internal static class PathsToMonitorScreen
 {
@@ -50,6 +53,34 @@ internal static class PathsToMonitorScreen
 
                 if (config.PathsToMonitor.Remove(selected))
                 {
+                    try
+                    {
+                        var selNorm = Path.GetFullPath(selected)
+                            .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+                            .Replace('/', '\\');
+
+                        config.Games.RemoveAll(g =>
+                        {
+                            try
+                            {
+                                var gp = Path.GetFullPath(g.Path ?? string.Empty).Replace('/', '\\');
+                                return string.Equals(gp, selNorm, StringComparison.OrdinalIgnoreCase)
+                                    || gp.StartsWith(selNorm + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase);
+                            }
+                            catch
+                            {
+                                var gpRaw = (g.Path ?? string.Empty).Replace('/', '\\')
+                                    .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+                                return gpRaw.StartsWith(selNorm, StringComparison.OrdinalIgnoreCase);
+                            }
+                        });
+                    }
+                    catch
+                    {
+                        var selRaw = selected.Replace('/', '\\').TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+                        config.Games.RemoveAll(g => (g.Path ?? string.Empty).Replace('/', '\\').StartsWith(selRaw, StringComparison.OrdinalIgnoreCase));
+                    }
+
                     ConfigStore.Save(configPath, config);
                 }
 
@@ -77,6 +108,18 @@ internal static class PathsToMonitorScreen
 
                 config.PathsToMonitor.Add(newPath);
                 ConfigStore.Save(configPath, config);
+                try
+                {
+                    var addedGames = ConfigStore.PopulateGamesFromMonitoredPaths(configPath);
+                    if (addedGames)
+                    {
+                        Console.WriteLine("Scanned new path and updated games.");
+                    }
+                }
+                catch
+                {
+                    // ignore scanning errors for UI flow
+                }
                 break;
             }
         }

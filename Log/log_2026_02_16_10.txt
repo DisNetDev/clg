@@ -1,0 +1,179 @@
+2026-02-16 10:02:15.936 | MainThread:10584 | INFO | ********************************* Start *********************************
+2026-02-16 10:02:15.936 | MainThread:10584 | INFO | X20Launcher init start
+2026-02-16 10:02:15.936 | MainThread:10584 | INFO | init log
+2026-02-16 10:02:15.942 | MainThread:10584 | INFO | current path C:\dev\clg
+2026-02-16 10:02:15.943 | MainThread:10584 | INFO | Launcher version is 1.92.730
+2026-02-16 10:02:15.943 | MainThread:10584 | INFO | crashhunter transid is 25A85468C7D72CFEF5433EBCD8B976B9_1771228933722_100012154
+2026-02-16 10:02:15.943 | MainThread:10584 | ERROR | Read launch state failed, error: [Errno 2] No such file or directory: 'C:\\dev\\clg\\launch_record'
+2026-02-16 10:02:15.945 | MainThread:10584 | INFO | Application init start
+2026-02-16 10:02:15.950 | MainThread:10584 | INFO | Launch record
+2026-02-16 10:02:16.452 | MainThread:10584 | INFO | QMLContext init start
+2026-02-16 10:02:16.452 | MainThread:10584 | INFO | Verify invite code success. don't need invite code
+2026-02-16 10:02:16.453 | MainThread:10584 | INFO | Language: en_US, Encoding: cp1252
+2026-02-16 10:02:16.453 | MainThread:10584 | INFO | Local Timezone Offset: 2.0 hours
+2026-02-16 10:02:16.453 | MainThread:10584 | INFO | offline marker time is 1771228936.452734, current time:1771228936.453735, offline marker timeout is 86400
+2026-02-16 10:02:16.453 | MainThread:10584 | INFO | requesting whoami URL: https://who.easebar.com/v2
+2026-02-16 10:02:18.117 | MainThread:10584 | INFO | Updating whoami record: {'ip': '156.155.31.90', 'code': 'ZA'}
+2026-02-16 10:02:18.118 | MainThread:10584 | INFO | whoami ret code: 200, setting env GAME_UNISDK_AIM_INFO
+2026-02-16 10:02:18.118 | MainThread:10584 | INFO | rg is ZnH@
+2026-02-16 10:02:18.118 | MainThread:10584 | INFO | loc is NA
+2026-02-16 10:02:18.797 | MainThread:10584 | INFO | set orbit project id x20na
+2026-02-16 10:02:18.797 | MainThread:10584 | INFO | offline marker time is 1771228936.452734, current time:1771228938.7970586, offline marker timeout is 86400
+2026-02-16 10:02:18.798 | MainThread:10584 | INFO | Start download multi patchlists
+2026-02-16 10:02:18.798 | MainThread:10584 | INFO | Start making multi requests
+2026-02-16 10:02:18.799 | MultiRequest_0:55068 | INFO | start sending request: https://x20na.update.easebar.com/pl/launcher_headcode_steam
+2026-02-16 10:02:18.799 | MultiRequest_1:52180 | INFO | start sending request: https://x20na.update.easebar.com/pl/launcher_release_steam
+2026-02-16 10:02:18.800 | MultiRequest_2:52304 | INFO | start sending request: https://x20na.update.easebar.com/pl/pc_release_steam
+2026-02-16 10:02:18.800 | MultiRequest_3:23328 | INFO | start sending request: https://x20na.update.easebar.com/pl/meta_steam
+2026-02-16 10:02:18.801 | MultiRequest_4:14064 | INFO | start sending request: https://x20na.update.easebar.com/pl/anti_virus_list
+2026-02-16 10:02:18.803 | MainThread:10584 | INFO | QMLContext init finish
+2026-02-16 10:02:18.829 | MainThread:10584 | INFO | Application init finish
+2026-02-16 10:02:19.553 | MultiRequest_0:55068 | INFO | request done: https://x20na.update.easebar.com/pl/launcher_headcode_steam
+2026-02-16 10:02:19.553 | MultiRequest_3:23328 | INFO | request done: https://x20na.update.easebar.com/pl/meta_steam
+2026-02-16 10:02:19.554 | MultiRequest_0:55068 | INFO | start sending request: https://x20na.update.easebar.com/pl/sp_pc_exe_global
+2026-02-16 10:02:19.554 | MultiRequest_3:23328 | INFO | start sending request: https://www.marvelrivals.com/client/video.json
+2026-02-16 10:02:19.561 | MultiRequest_4:14064 | INFO | request done: https://x20na.update.easebar.com/pl/anti_virus_list
+2026-02-16 10:02:19.565 | MultiRequest_1:52180 | INFO | request done: https://x20na.update.easebar.com/pl/launcher_release_steam
+2026-02-16 10:02:19.633 | MultiRequest_0:55068 | INFO | request done: https://x20na.update.easebar.com/pl/sp_pc_exe_global
+2026-02-16 10:02:19.673 | MultiRequest_3:23328 | INFO | request done: https://www.marvelrivals.com/client/video.json
+2026-02-16 10:02:19.918 | MultiRequest_2:52304 | WARNING | request failed:https://x20na.update.easebar.com/pl/pc_release_steam, reason is HTTP Error 404: Not Found
+2026-02-16 10:02:19.918 | MultiRequest_2:52304 | INFO | request done: https://x20na.update.easebar.com/pl/pc_release_steam
+2026-02-16 10:02:21.204 | MainThread:10584 | INFO | qml: MainWindow Completed
+2026-02-16 10:02:21.204 | MainThread:10584 | INFO | qml: BaseView Completed
+2026-02-16 10:02:21.245 | MainThread:10584 | INFO | qml: BaseView webViewComponent create
+2026-02-16 10:02:21.245 | MainThread:10584 | INFO | qml: BaseView webViewComponent Ready
+2026-02-16 10:02:21.416 | DRPF:38312 | INFO | [WhoamiResultSucceed] Send drpf success
+2026-02-16 10:02:21.808 | MainThread:10584 | INFO | qml: WebView onCompleted
+2026-02-16 10:02:21.809 | MainThread:10584 | INFO | qml: BaseView webViewObj create success!
+2026-02-16 10:02:21.809 | MainThread:10584 | INFO | qml: NewBaseView Completed
+2026-02-16 10:02:21.812 | MainThread:10584 | INFO | qml: AntiCheatPopup onCompleted
+2026-02-16 10:02:21.812 | MainThread:10584 | INFO | qml: ProblemFeedbackDialog onCompleted
+2026-02-16 10:02:22.034 | MainThread:10584 | INFO | qml: Webengine request started
+2026-02-16 10:02:22.221 | MainThread:10584 | INFO | qml: MainWindow lazyLoad
+2026-02-16 10:02:22.239 | MainThread:10584 | INFO | qml: MainWindowLazyLoadItem Ready
+2026-02-16 10:02:22.239 | MainThread:10584 | INFO | SelfUpdateBridge init start
+2026-02-16 10:02:22.239 | MainThread:10584 | INFO | SelfUpdateBridge init finish
+2026-02-16 10:02:22.239 | MainThread:10584 | INFO | DownloadBridge init start
+2026-02-16 10:02:22.240 | MainThread:10584 | INFO | DownloadBridge init finish
+2026-02-16 10:02:22.240 | MainThread:10584 | INFO | RepairBridge init start
+2026-02-16 10:02:22.240 | MainThread:10584 | INFO | RepairBridge init finish
+2026-02-16 10:02:22.240 | MainThread:10584 | INFO | SettingsBridge init start
+2026-02-16 10:02:22.308 | MainThread:10584 | INFO | SettingsBridge init finish
+2026-02-16 10:02:22.363 | MainThread:10584 | INFO | qml: MainWindowLazyLoadItem Completed
+2026-02-16 10:02:22.368 | MainThread:10584 | INFO | qml: BaseView lazyLoad
+2026-02-16 10:02:22.368 | MainThread:10584 | INFO | qml: BaseViewLazyLoadItem Ready
+2026-02-16 10:02:24.131 | MainThread:10584 | INFO | qml: BaseViewLazyLoadItem Completed
+2026-02-16 10:02:24.132 | MainThread:10584 | INFO | qml: handleLazyLoadSuccess
+2026-02-16 10:02:24.225 | CheckGameExeVersion:46492 | INFO | CheckGameExeVersionWorker start
+2026-02-16 10:02:24.225 | ClearOutdateGameLog:20248 | INFO | Clear LegacySaved
+2026-02-16 10:02:24.229 | CheckGameExeVersion:46492 | INFO | Check game C:\dev\clg\MarvelGame\Marvel.exe is exists: False, and version is 
+2026-02-16 10:02:24.229 | ClearOutdateGameLog:20248 | INFO | Clear outdate game log
+2026-02-16 10:02:24.403 | MainThread:10584 | INFO | qml: mainWindow visible
+2026-02-16 10:02:24.406 | MetaInfoLog:47912 | INFO | MetaInfoLogWorker start
+2026-02-16 10:02:24.406 | SyncLanguage:50828 | INFO | SyncLanguageWorker start
+2026-02-16 10:02:24.407 | MainThread:10584 | INFO | xinput1_4 loaded
+2026-02-16 10:02:24.407 | MainThread:10584 | INFO | WinMM API initialized
+2026-02-16 10:02:24.407 | DownloadWebVideo:23180 | INFO | Video json video url is empty
+2026-02-16 10:02:24.407 | LogicInit:46204 | INFO | start check headcode
+2026-02-16 10:02:24.408 | MainThread:10584 | INFO | qml: SettingsDialog Completed
+2026-02-16 10:02:24.408 | LogicInit:46204 | INFO | empty headcode patchlist, ignore
+2026-02-16 10:02:24.408 | MainThread:10584 | INFO | qml: BaseCombobox Completed
+2026-02-16 10:02:24.409 | MainThread:10584 | INFO | qml: ProblemFeedbackDialog onCompleted
+2026-02-16 10:02:24.409 | CleanupDownloads:48236 | INFO | Cleaning incomplete downloads older than 7 days
+2026-02-16 10:02:24.409 | MainThread:10584 | INFO | qml: UploadDialog Completed
+2026-02-16 10:02:24.409 | DownloadWebVideo:23180 | INFO | config video url is empty, skip download web video
+2026-02-16 10:02:24.409 | GamepadMonitor:44512 | INFO | GamepadMonitorWorker start
+2026-02-16 10:02:24.409 | MainThread:10584 | INFO | qml: QuitDialog Completed
+2026-02-16 10:02:24.410 | MainThread:10584 | INFO | qml: ExperimentalFeatureSwitch Completed
+2026-02-16 10:02:24.410 | MainThread:10584 | INFO | qml: ProblemFeedbackDialog onCompleted
+2026-02-16 10:02:24.410 | MainThread:10584 | INFO | qml: DownloadProgress Completed
+2026-02-16 10:02:24.410 | MainThread:10584 | INFO | qml: SelfUpdateView Completed
+2026-02-16 10:02:24.433 | UploadProfile:20168 | ERROR | Upload profile failed: [WinError 2] The system cannot find the file specified
+2026-02-16 10:02:24.433 | LogicInit:46204 | INFO | Start check self update
+2026-02-16 10:02:24.433 | LogicInit:46204 | WARNING | Patchlist content is empty, cannot parse
+2026-02-16 10:02:24.433 | LogicInit:46204 | INFO | Get server patchlist data is empty. cannot update
+2026-02-16 10:02:24.435 | LogicInit:46204 | INFO | Start check game update
+2026-02-16 10:02:24.435 | LogicInit:46204 | WARNING | first remote download patchlist content is empty, start second try
+2026-02-16 10:02:24.503 | LogicInit:46204 | WARNING | Get remote content only failed, reason is: HTTP Error 404: Not Found
+2026-02-16 10:02:24.503 | LogicInit:46204 | INFO | Check update, remote version is 0 <class 'str'>
+2026-02-16 10:02:24.503 | LogicInit:46204 | INFO | Check update, local version is 0
+2026-02-16 10:02:24.504 | LogicInit:46204 | INFO | Start qsec
+2026-02-16 10:02:24.923 | LogicInit:46204 | INFO | Start check local env
+2026-02-16 10:02:24.923 | LogicInit:46204 | INFO | start execute env check [check_local_dll]
+2026-02-16 10:02:24.923 | LogicInit:46204 | INFO | executed env check [check_local_dll]
+2026-02-16 10:02:24.923 | LogicInit:46204 | INFO | start execute env check [install_dependency]
+2026-02-16 10:02:24.923 | LogicInit:46204 | INFO | Non-Epic channel, skip install dependency
+2026-02-16 10:02:24.923 | LogicInit:46204 | INFO | executed env check [install_dependency]
+2026-02-16 10:02:24.923 | LogicInit:46204 | INFO | start execute env check [check_gpu_driver]
+2026-02-16 10:02:24.961 | LogicInit:46204 | INFO | Driver: NVIDIA GeForce RTX 3070, Driver date >= 20250815000000, check passed
+2026-02-16 10:02:24.961 | LogicInit:46204 | INFO | executed env check [check_gpu_driver]
+2026-02-16 10:02:24.961 | LogicInit:46204 | INFO | start execute env check [check_windows_version]
+2026-02-16 10:02:25.169 | LogicInit:46204 | INFO | Windows version is: 10.0.26200
+2026-02-16 10:02:25.169 | LogicInit:46204 | INFO | Windows version, check passed
+2026-02-16 10:02:25.169 | LogicInit:46204 | INFO | executed env check [check_windows_version]
+2026-02-16 10:02:25.169 | LogicInit:46204 | INFO | start execute env check [check_gpu_memory]
+2026-02-16 10:02:25.169 | LogicInit:46204 | INFO | [get_max_vram_from_registry] current Model: NVIDIA GeForce RTX 3070, VRAM (GB): 8.0
+2026-02-16 10:02:25.442 | LogicInit:46204 | INFO | [nvidia smi] Max VRAM GPU: 8.00 GB
+2026-02-16 10:02:25.442 | LogicInit:46204 | INFO | [check_total_gpu_memory-smi] detected max Model: NVIDIA GeForce RTX 3070, VRAM (GB): 8.0
+2026-02-16 10:02:25.442 | LogicInit:46204 | INFO | executed env check [check_gpu_memory]
+2026-02-16 10:02:25.442 | LogicInit:46204 | INFO | start execute env check [check_cpu_name]
+2026-02-16 10:02:25.458 | LogicInit:46204 | INFO | Check cpu name,  cpu name: AMD Ryzen 7 5700X 8-Core Processor             
+2026-02-16 10:02:25.458 | LogicInit:46204 | INFO | cpu name check passed
+2026-02-16 10:02:25.458 | LogicInit:46204 | INFO | executed env check [check_cpu_name]
+2026-02-16 10:02:25.458 | LogicInit:46204 | INFO | start execute env check [check_steam_id_txt]
+2026-02-16 10:02:25.459 | LogicInit:46204 | ERROR | Failed to create C:\dev\clg\MarvelGame\Marvel\Binaries\Win64\steam_appid.txt, Error: [Errno 2] No such file or directory: 'C:\\dev\\clg\\MarvelGame\\Marvel\\Binaries\\Win64\\steam_appid.txt'
+2026-02-16 10:02:25.459 | LogicInit:46204 | INFO | executed env check [check_steam_id_txt]
+2026-02-16 10:02:25.459 | LogicInit:46204 | INFO | start execute env check [check_invalid_pak]
+2026-02-16 10:02:25.459 | LogicInit:46204 | INFO | [get_paklist_from_version_info]version.json not found, skip
+2026-02-16 10:02:25.459 | LogicInit:46204 | WARNING | get pak list failed, skip check blacklist pak
+2026-02-16 10:02:25.459 | LogicInit:46204 | INFO | executed env check [check_invalid_pak]
+2026-02-16 10:02:25.459 | LogicInit:46204 | INFO | start execute env check [check_gpu_crashes]
+2026-02-16 10:02:25.460 | LogicInit:46204 | INFO | current crashes folder: C:\Users\morne\AppData\Local\Marvel\Saved\Crashes
+2026-02-16 10:02:25.461 | LogicInit:46204 | INFO | crash found in record, skip checking crash folder UECC-Windows-341D1B0345822B91EDD3DBAE4283A965_0000
+2026-02-16 10:02:25.461 | LogicInit:46204 | INFO | crash found in record, skip checking crash folder UECC-Windows-37D4933144897A8FFD4434B374AB2AC7_0000
+2026-02-16 10:02:25.461 | LogicInit:46204 | INFO | crash found in record, skip checking crash folder UECC-Windows-4BC6BEAC46654D26F2EFFC905E465B5F_0000
+2026-02-16 10:02:25.461 | LogicInit:46204 | INFO | crash found in record, skip checking crash folder UECC-Windows-5385239C4473F9970E8432993E6F9B83_0000
+2026-02-16 10:02:25.461 | LogicInit:46204 | INFO | crash found in record, skip checking crash folder UECC-Windows-69A3C3704E92ADE6FE54FD88C5694499_0000
+2026-02-16 10:02:25.462 | LogicInit:46204 | INFO | executed env check [check_gpu_crashes]
+2026-02-16 10:02:25.462 | LogicInit:46204 | INFO | start execute env check [check_pak_crashes]
+2026-02-16 10:02:25.471 | LogicInit:46204 | INFO | [get_paklist_from_version_info]version.json not found, skip
+2026-02-16 10:02:25.471 | LogicInit:46204 | WARNING | get pak list failed, skip check invalid pak marker
+2026-02-16 10:02:25.471 | LogicInit:46204 | INFO | [check_pak_crashes] current crashes folder: C:\Users\morne\AppData\Local\Marvel\Saved\Crashes
+2026-02-16 10:02:25.522 | LogicInit:46204 | INFO | pak crashes xml not found, skip check pak crash
+2026-02-16 10:02:25.522 | LogicInit:46204 | INFO | executed env check [check_pak_crashes]
+2026-02-16 10:02:25.522 | LogicInit:46204 | INFO | start execute env check [check_anti_virus]
+2026-02-16 10:02:25.563 | LogicInit:46204 | INFO | executed env check [check_anti_virus]
+2026-02-16 10:02:25.564 | LogicInit:46204 | INFO | start execute env check [check_season_crashes]
+2026-02-16 10:02:25.564 | LogicInit:46204 | INFO | [get_paklist_from_version_info]version.json not found, skip
+2026-02-16 10:02:25.564 | LogicInit:46204 | WARNING | get pak list failed, skip check redundant pak
+2026-02-16 10:02:25.564 | LogicInit:46204 | INFO | current crashes folder: C:\Users\morne\AppData\Local\Marvel\Saved\Crashes
+2026-02-16 10:02:25.565 | LogicInit:46204 | WARNING | version_info_path C:\dev\clg\MarvelGame\version.json not found
+2026-02-16 10:02:25.565 | LogicInit:46204 | INFO | executed env check [check_season_crashes]
+2026-02-16 10:02:25.565 | LogicInit:46204 | INFO | start execute env check [check_season_cache]
+2026-02-16 10:02:25.565 | LogicInit:46204 | WARNING | Check local env check_season_cache failed: 'X20QMLContext' object has no attribute 'check_season_cache'
+2026-02-16 10:02:25.565 | LogicInit:46204 | INFO | start execute env check [check_gpu_right_used]
+2026-02-16 10:02:25.565 | LogicInit:46204 | INFO | executed env check [check_gpu_right_used]
+2026-02-16 10:02:25.565 | LogicInit:46204 | INFO | start execute env check [check_win8rtm]
+2026-02-16 10:02:25.565 | LogicInit:46204 | INFO | check win8rtm res: False
+2026-02-16 10:02:25.565 | LogicInit:46204 | INFO | executed env check [check_win8rtm]
+2026-02-16 10:02:25.566 | LogicInit:46204 | INFO | Start one time clear
+2026-02-16 10:02:25.566 | LogicInit:46204 | INFO | Init finished, can click start button
+2026-02-16 10:02:25.571 | MainThread:10584 | INFO | Handle initialize finished
+2026-02-16 10:02:25.593 | GPURightUsedCheck:24624 | INFO | GPU NVIDIA GeForce RTX 3070 is current (has resolution: 1920x1080)
+2026-02-16 10:02:25.593 | GPURightUsedCheck:24624 | INFO | GPU NVIDIA GeForce RTX 3070: is_current=True, is_discrete=True, AdapterRAM=0
+2026-02-16 10:02:25.593 | GPURightUsedCheck:24624 | INFO | GPU right used check passed: Found current discrete GPU: NVIDIA GeForce RTX 3070
+2026-02-16 10:02:25.753 | DRPF:53716 | INFO | [OpenLauncher] Send drpf success
+2026-02-16 10:02:26.087 | DLLCheck:53232 | INFO | DLL check results written to C:\Users\morne\AppData\Local\Marvel\Saved\integrity_check_results.json
+2026-02-16 10:02:26.888 | DRPF:24428 | INFO | [GPURightUsed] Send drpf success
+2026-02-16 10:02:28.049 | MainThread:10584 | INFO | qml: Webengine request succeeded
+2026-02-16 10:02:34.989 | MainThread:10584 | INFO | SyncLanguageWorker stop
+2026-02-16 10:02:36.418 | MainThread:10584 | INFO | MetaInfoLogWorker stop
+2026-02-16 10:02:38.418 | MainThread:10584 | INFO | GamepadMonitorWorker stop
+2026-02-16 10:02:38.450 | MainThread:10584 | INFO | CheckGameExeVersionWorker stop
+2026-02-16 10:02:40.267 | MainThread:10584 | INFO | Qt quit
+2026-02-16 10:02:40.272 | MainThread:10584 | INFO | qml: MediaPlayer onDestruction
+2026-02-16 10:02:40.272 | MainThread:10584 | INFO | qml: MediaPlayer cleanup completed
+2026-02-16 10:02:42.277 | MainThread:10584 | INFO | ********************************* End, return code: 0 *********************************
+
+[2026-02-16 10:02:18.120] [launcher] [info] LauncherApplication initialize
+[2026-02-16 10:02:18.797] [launcher] [info] "C:\\dev\\clg\\temp\\.updater" deleted successfully.

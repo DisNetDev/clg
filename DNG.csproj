@@ -7,11 +7,19 @@
     <Nullable>enable</Nullable>
     <AssemblyName>DNG</AssemblyName>
     <RootNamespace>DNG</RootNamespace>
+    <!-- Use this ICO as the application icon for the built EXE on Windows -->
+    <ApplicationIcon>dng.ico</ApplicationIcon>
+    <Win32Icon>dng.ico</Win32Icon>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Sharprompt" Version="3.0.1" />
     <PackageReference Include="System.CommandLine" Version="2.0.3" />
+  </ItemGroup>
+
+  <!-- Ensure the icon file is included in the project (place dng.ico at project root) -->
+  <ItemGroup>
+    <None Include="dng.ico" Visible="false" />
   </ItemGroup>
 
 </Project>
