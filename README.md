@@ -15,7 +15,7 @@ DNG is a small, command-line games launcher and monitor. It provides a console U
 
 - **Browse games**: Use the Games screen to see installed and discovered games. Select a game to launch it.
 - **Add monitor path**: Use the `Paths to Monitor` screen in the UI to add or remove folders to watch.
-- **Manual edits**: If you prefer editing by hand, configuration is stored in %appdata% folder. The file is called DNG-config.json
+- **Manual edits**: If you prefer editing by hand, configuration is stored in %appdata% folder. The file is called DNG-config.json Note that the parent directory of the game has to be in the pathsToMonitor list, else the program will just remove the game once opened.
 
 **How games are discovered**
 
