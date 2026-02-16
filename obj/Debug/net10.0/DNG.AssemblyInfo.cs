@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DNG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65b0b7dcb23bf09994e8198b0c75ea4933b4e9d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f44ad6d17a26b77c6fd1064d1de35e418fe7d4fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("DNG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DNG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
