@@ -1,5 +1,3 @@
-**Project**
-
 DNG is a small, command-line games launcher and monitor. It provides a console UI for browsing and launching games, and it can watch folders you configure and automatically add new games when they appear.
 
 **Features**
