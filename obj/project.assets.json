@@ -145,19 +145,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/morne/.nuget/packages/": {}
+    "C:\\Users\\morne\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/morne/development/dev/clg/clg.csproj",
-      "projectName": "clg",
-      "projectPath": "/Users/morne/development/dev/clg/clg.csproj",
-      "packagesPath": "/Users/morne/.nuget/packages/",
-      "outputPath": "/Users/morne/development/dev/clg/obj/",
+      "projectUniqueName": "C:\\dev\\clg\\DNG.csproj",
+      "projectName": "DNG",
+      "projectPath": "C:\\dev\\clg\\DNG.csproj",
+      "packagesPath": "C:\\Users\\morne\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\clg\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/morne/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\morne\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -212,7 +212,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MWUXNelnjeo=",
+  "dgSpecHash": "mcekNmshNX0=",
   "success": true,
-  "projectFilePath": "/Users/morne/development/dev/clg/clg.csproj",
+  "projectFilePath": "C:\\dev\\clg\\DNG.csproj",
   "expectedPackageFiles": [
-    "/Users/morne/.nuget/packages/sharprompt/3.0.1/sharprompt.3.0.1.nupkg.sha512",
-    "/Users/morne/.nuget/packages/system.commandline/2.0.3/system.commandline.2.0.3.nupkg.sha512"
+    "C:\\Users\\morne\\.nuget\\packages\\sharprompt\\3.0.1\\sharprompt.3.0.1.nupkg.sha512",
+    "C:\\Users\\morne\\.nuget\\packages\\system.commandline\\2.0.3\\system.commandline.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

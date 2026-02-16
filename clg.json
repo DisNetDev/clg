@@ -1,5 +1,36 @@
 {
-  "games": [],
+  "games": [
+    {
+      "name": "112 Operator",
+      "path": "C:\\Games\\112 Operator",
+      "executablePath": ""
+    },
+    {
+      "name": "Cities Skylines II",
+      "path": "C:\\Games\\Cities Skylines II",
+      "executablePath": ""
+    },
+    {
+      "name": "Farm Frenzy Mega Pack",
+      "path": "C:\\Games\\Farm Frenzy Mega Pack",
+      "executablePath": "C:\\Games\\Farm Frenzy Mega Pack\\FarmFrenzyMegaPack.exe"
+    },
+    {
+      "name": "Goldberg",
+      "path": "C:\\Games\\Goldberg",
+      "executablePath": ""
+    },
+    {
+      "name": "Hytale",
+      "path": "C:\\Games\\Hytale",
+      "executablePath": ""
+    },
+    {
+      "name": "Ready or Not [FitGirl Repack]",
+      "path": "C:\\Games\\Ready or Not [FitGirl Repack]",
+      "executablePath": ""
+    }
+  ],
   "pathsToMonitor": [
     "C:\\Games"
   ]

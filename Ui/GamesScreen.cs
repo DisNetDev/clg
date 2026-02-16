@@ -1,4 +1,6 @@
 using Sharprompt;
+using System.Diagnostics;
+using System.IO;
 
 internal static class GamesScreen
 {
@@ -8,7 +10,7 @@ internal static class GamesScreen
 
         while (true)
         {
-            Console.Clear();
+            ConsoleUtil.PrintHeader("Games");
 
             var config = ConfigStore.Load(configPath);
             var options = config.Games
@@ -25,7 +27,70 @@ internal static class GamesScreen
                 return;
             }
 
-            // Selecting a game currently just stays on this screen.
+            var game = config.Games.FirstOrDefault(g => string.Equals(g.Name, selected, StringComparison.OrdinalIgnoreCase));
+            if (game is null)
+            {
+                continue;
+            }
+
+            var execPath = (game.ExecutablePath ?? string.Empty).Trim();
+            if (string.IsNullOrWhiteSpace(execPath) || !File.Exists(execPath))
+            {
+                List<string> exeFiles = new();
+                try
+                {
+                    if (!Directory.Exists(game.Path))
+                    {
+                        Console.WriteLine("Game path not found. Press any key to continue.");
+                        Console.ReadKey(true);
+                        continue;
+                    }
+
+                    exeFiles = Directory.EnumerateFiles(game.Path, "*.exe", SearchOption.AllDirectories)
+                        .OrderBy(f => f)
+                        .ToList();
+                }
+                catch
+                {
+                    Console.WriteLine("Could not enumerate executables in the game folder. Press any key to continue.");
+                    Console.ReadKey(true);
+                    continue;
+                }
+
+                if (exeFiles.Count == 0)
+                {
+                    Console.WriteLine("No .exe files found in the game folder. Press any key to continue.");
+                    Console.ReadKey(true);
+                    continue;
+                }
+
+                var choice = PromptHelper.SelectPreserveDisplay("Select executable", exeFiles);
+                if (string.IsNullOrWhiteSpace(choice))
+                {
+                    continue;
+                }
+
+                execPath = choice;
+
+                var idx = config.Games.FindIndex(g => string.Equals(g.Name, game.Name, StringComparison.OrdinalIgnoreCase));
+                if (idx >= 0)
+                {
+                    config.Games[idx] = config.Games[idx] with { ExecutablePath = execPath };
+                    ConfigStore.Save(configPath, config);
+                }
+            }
+
+            try
+            {
+                var psi = new ProcessStartInfo(execPath) { UseShellExecute = true };
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Failed to launch '{execPath}': {ex.Message}");
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey(true);
+            }
         }
     }
 }

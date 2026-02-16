@@ -23,7 +23,7 @@ class Program
 
         while (true)
         {
-            Console.Clear();
+            ConsoleUtil.PrintHeader("DNG - Main Menu");
 
             var config = ConfigStore.Load(configPath);
 

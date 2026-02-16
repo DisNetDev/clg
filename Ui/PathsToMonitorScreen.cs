@@ -10,7 +10,7 @@ internal static class PathsToMonitorScreen
 
         while (true)
         {
-            Console.Clear();
+            ConsoleUtil.PrintHeader("Paths to Monitor");
 
             var config = ConfigStore.Load(configPath);
             if (config.PathsToMonitor.Count == 0)
@@ -41,7 +41,7 @@ internal static class PathsToMonitorScreen
                     continue;
                 }
 
-                Console.Clear();
+                ConsoleUtil.PrintHeader("Paths to Monitor");
 
                 if (delete == false)
                 {
@@ -61,7 +61,7 @@ internal static class PathsToMonitorScreen
                 var input = PromptHelper.Input("New path (blank/Back to cancel)") ?? string.Empty;
                 var newPath = input.Trim();
 
-                Console.Clear();
+                ConsoleUtil.PrintHeader("Paths to Monitor");
 
                 if (string.IsNullOrWhiteSpace(newPath)
                     || string.Equals(newPath, backOption, StringComparison.OrdinalIgnoreCase))
